@@ -1,0 +1,15 @@
+{
+  "name": "志賀和樹のサッカーアプリ",
+  "short_name": "ShigaSoccer",
+  "start_url": "/soccer-Kazuki-Shiga/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C7000B",
+  "icons": [
+    {
+      "src": "assets/nagoya.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
