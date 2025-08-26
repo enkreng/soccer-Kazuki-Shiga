@@ -4,87 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>志賀和樹のサッカーWebサイト</title>
-  <meta name="description" content="志賀和樹のサッカーサイト。名古屋グランパス、日本代表、高校サッカーなどの情報・観戦記録・アプリのダウンロードを掲載。">
-  <meta name="theme-color" content="#C7000B">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="志賀和樹のサッカー愛" />
-  <meta property="og:description" content="名古屋グランパスを中心にサッカー情報を発信。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://enkreng.github.io/soccer-Kazuki-Shiga/" />
-  <meta property="og:image" content="https://enkreng.github.io/soccer-Kazuki-Shiga/assets/nagoya.jpg" />
-
-  <!-- PWA -->
+  <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
-
-  <!-- favicon -->
-  <link rel="icon" href="assets/nagoya.jpg">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- ヘッダー -->
-  <header class="site-header">
-    <h1>⚽ 志賀和樹のサッカー愛 ⚽</h1>
-    <p class="lead">名古屋グランパス / 日本代表 / 高校サッカー を追いかけるサポーターのサイト</p>
+  <header>
+    <h1>志賀和樹のサッカーWebサイト</h1>
   </header>
 
+  <!-- ナビゲーション -->
+  <nav>
+    <ul>
+      <li><a href="#profile">プロフィール</a></li>
+      <li><a href="#news">サッカーニュース</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
   <!-- メイン -->
-  <main class="container">
-    <section id="app" class="card">
-      <h2>ぼくのアプリを公開しました！</h2>
-      <p>このサイトで公開しているアプリの概要とダウンロードリンクを掲載しています。</p>
-      <div class="download-row">
-        <a class="btn" href="#" id="open-app">アプリを開く（Demo）</a>
-        <a class="btn secondary" href="#" id="install-btn" hidden>ホーム画面に追加</a>
-      </div>
-      <img src="assets/nagoya.jpg" alt="名古屋グランパス" class="screenshot">
+  <main>
+    <section id="profile">
+      <h2>プロフィール</h2>
+      <p>サッカー大好き、志賀和樹です！地元チーム「名古屋グランパス」を応援しています！</p>
     </section>
 
-    <section class="card">
-      <h2>趣味: サッカー観戦</h2>
-      <p>名古屋グランパスが特に好きです！スタジアムで真っ赤なサポーターと一緒に応援するのが最高です！</p>
-      <img src="assets/nagoya.jpg" alt="サンプル">
-    </section>
-
-    <section class="card">
-      <h2>日本代表</h2>
-      <p>日本代表の試合も欠かさずチェックしています。ワールドカップやアジアカップでの日本代表の戦いは毎回胸が熱くなります！</p>
-      <img src="assets/japan.webp" alt="サンプル">
-    </section>
-
-    <section class="card">
-      <h2>高校サッカー</h2>
-      <p>高校サッカーも大好きで、全国高校サッカー選手権を毎年楽しみにしています。</p>
-    </section>
-
-    <section class="card">
-      <h2>お知らせ</h2>
-      <p id="news">🔥 次回の観戦予定やニュースをここに表示できます。</p>
+    <section id="news">
+      <h2>最新サッカーニュース</h2>
+      <div id="news-container">ニュースを読み込み中...</div>
     </section>
   </main>
 
   <!-- フッター -->
-  <footer class="site-footer">
-    <p>お問い合わせ: <a href="mailto:example@example.com">example@example.com</a></p>
-    <p class="social">
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> |
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </p>
-    <p class="copyright">© <span id="year"></span> 志賀和樹</p>
+  <footer id="contact">
+    <p>お問い合わせ: <a href="mailto:kazuki@example.com">kazuki@example.com</a></p>
+    <p>© 2025 志賀和樹</p>
   </footer>
 
-  <!-- JS -->
-  <script src="js/app.js"></script>
-
-  <!-- Service Worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('js/sw.js');
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
