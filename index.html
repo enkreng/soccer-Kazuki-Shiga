@@ -4,138 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>志賀和樹のサッカーWebサイト</title>
-  <style>
-    /* リセット＆基本設定 */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff;
-      padding-bottom: 120px; /* フッターの分 */
-      color: #333;
-      line-height: 1.8;
-    }
-    header {
-      background-color: #C7000B;
-      color: #fff;
-      text-align: center;
-      padding: 24px 16px;
-      border-bottom: 5px solid #000;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    main {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 0 16px;
-    }
-    h2 {
-      color: #C7000B;
-      border-left: 8px solid #000;
-      padding-left: 10px;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      font-size: 1.1rem;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 12px 0;
-      border-radius: 8px;
-    }
-    footer {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      padding: 16px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      border-top: 4px solid #C7000B;
-      box-sizing: border-box;
-    }
-    footer p {
-      margin: 6px 0;
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: inherit;
-      text-decoration: none;
-      margin: 0 10px;
-      transition: color 0.3s;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    /* スマホ対応 */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem;
-      }
-      main {
-        margin: 10px;
-        padding: 0 12px;
-      }
-      h2 {
-        font-size: 1.3rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-      footer p {
-        font-size: 0.8rem;
-      }
-    }
-  </style>
+  <meta name="description" content="志賀和樹のサッカーサイト。名古屋グランパス、日本代表、高校サッカーなどの情報・観戦記録・アプリのダウンロードを掲載。">
+  <meta name="theme-color" content="#C7000B">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="志賀和樹のサッカー愛" />
+  <meta property="og:description" content="名古屋グランパスを中心にサッカー情報を発信。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://enkreng.github.io/soccer-Kazuki-Shiga/" />
+  <meta property="og:image" content="https://enkreng.github.io/soccer-Kazuki-Shiga/assets/nagoya.jpg" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- favicon -->
+  <link rel="icon" href="assets/nagoya.jpg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- ヘッダー -->
-  <header>
+  <header class="site-header">
     <h1>⚽ 志賀和樹のサッカー愛 ⚽</h1>
+    <p class="lead">名古屋グランパス / 日本代表 / 高校サッカー を追いかけるサポーターのサイト</p>
   </header>
 
   <!-- メイン -->
-  <main>
-    <!-- 名古屋グランパス -->
-    <h2>趣味: サッカー観戦</h2>
-    <p>名古屋グランパスが特に好きです！スタジアムで真っ赤なサポーターと一緒に応援するのが最高です！</p>
-    <img src="https://github.com/enkreng/soccer-Kazuki-Shiga/blob/main/nagoya.jpg?raw=true" alt="サンプル">
+  <main class="container">
+    <section id="app" class="card">
+      <h2>ぼくのアプリを公開しました！</h2>
+      <p>このサイトで公開しているアプリの概要とダウンロードリンクを掲載しています。</p>
+      <div class="download-row">
+        <a class="btn" href="#" id="open-app">アプリを開く（Demo）</a>
+        <a class="btn secondary" href="#" id="install-btn" hidden>ホーム画面に追加</a>
+      </div>
+      <img src="assets/nagoya.jpg" alt="名古屋グランパス" class="screenshot">
+    </section>
 
-    <!-- 日本代表 -->
-    <h2>日本代表</h2>
-    <p>日本代表の試合も欠かさずチェックしています。ワールドカップやアジアカップでの日本代表の戦いは毎回胸が熱くなり、サムライブルーの誇りを感じます！</p>
-    <img src="https://raw.githubusercontent.com/enkreng/soccer-Kazuki-Shiga/refs/heads/main/Japan%20Football%2020240905.webp" alt="サンプル">
+    <section class="card">
+      <h2>趣味: サッカー観戦</h2>
+      <p>名古屋グランパスが特に好きです！スタジアムで真っ赤なサポーターと一緒に応援するのが最高です！</p>
+      <img src="assets/nagoya.jpg" alt="サンプル">
+    </section>
 
-    <!-- 高校サッカー -->
-    <h2>高校サッカー</h2>
-    <p>高校サッカーも大好きで、全国高校サッカー選手権を毎年楽しみにしています。若き選手たちが全力で戦う姿に感動し、自分もサッカーの情熱を思い出します。</p>
+    <section class="card">
+      <h2>日本代表</h2>
+      <p>日本代表の試合も欠かさずチェックしています。ワールドカップやアジアカップでの日本代表の戦いは毎回胸が熱くなります！</p>
+      <img src="assets/japan.webp" alt="サンプル">
+    </section>
 
-    <!-- お知らせ -->
-    <h2>お知らせ</h2>
-    <p>🔥 次回の観戦予定や名古屋グランパス、日本代表、高校サッカーに関する最新ニュースをここに掲載できます。</p>
+    <section class="card">
+      <h2>高校サッカー</h2>
+      <p>高校サッカーも大好きで、全国高校サッカー選手権を毎年楽しみにしています。</p>
+    </section>
+
+    <section class="card">
+      <h2>お知らせ</h2>
+      <p id="news">🔥 次回の観戦予定やニュースをここに表示できます。</p>
+    </section>
   </main>
 
   <!-- フッター -->
-  <footer>
-    <p>お問い合わせ: example@example.com</p>
-    <p>
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="color:#1DA1F2;">Twitter</a> |
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="color:#1877F2;">Facebook</a> |
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color:#E1306C;">Instagram</a>
+  <footer class="site-footer">
+    <p>お問い合わせ: <a href="mailto:example@example.com">example@example.com</a></p>
+    <p class="social">
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> |
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
     </p>
+    <p class="copyright">© <span id="year"></span> 志賀和樹</p>
   </footer>
 
+  <!-- JS -->
+  <script src="js/app.js"></script>
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('js/sw.js');
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
