@@ -1,0 +1,86 @@
+/* 基本リセット */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+  padding-bottom: 140px; /* フッター用余白 */
+}
+
+/* ヘッダー */
+.site-header{
+  background-color:#C7000B;
+  color:#fff;
+  text-align:center;
+  padding:28px 16px;
+  border-bottom:5px solid #000;
+}
+.site-header h1{ margin:0; font-size:2rem; }
+.site-header .lead{ margin-top:6px; opacity:0.95; }
+
+/* コンテナ */
+.container{ max-width:900px; margin:22px auto; padding:0 16px; }
+
+/* カード */
+.card{
+  background:#fff;
+  border-radius:10px;
+  padding:18px;
+  margin-bottom:18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-left:6px solid #C7000B;
+}
+.card h2{ color:#C7000B; margin-top:0; }
+
+/* 画像 */
+.screenshot, img{ width:100%; height:auto; border-radius:8px; margin:12px 0; }
+
+/* ボタン */
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  background:#C7000B;
+  color:#fff;
+  font-weight:600;
+  margin-right:8px;
+}
+.btn.secondary{
+  background:#333;
+}
+.download-row{ margin:10px 0; }
+
+/* フォーム */
+form label{ display:block; margin:10px 0; font-size:0.95rem; }
+form input[type="text"], form input[type="email"], form textarea{
+  width:100%;
+  padding:8px 10px;
+  border-radius:6px;
+  border:1px solid #ddd;
+  font-size:1rem;
+}
+
+/* フッター（固定） */
+.site-footer{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:14px 12px;
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  border-top:4px solid #C7000B;
+  box-sizing:border-box;
+}
+.site-footer a{ color:inherit; text-decoration:underline; }
+
+/* レスポンシブ */
+@media (max-width:600px){
+  .site-header h1{ font-size:1.4rem; }
+  .container{ margin:10px auto; padding:0 12px; }
+  .card{ padding:14px; }
+}
